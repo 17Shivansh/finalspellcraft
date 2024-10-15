@@ -4,6 +4,18 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { motion } from "framer-motion";
+// Import all images
+import spellFinalCover from '../assets/images/spell_final_cover__4___3_.pdf-removebg-preview.png'; // Adjust path if needed
+import girlImage1 from '../assets/images/Girl-image-2.png';
+import girlImage2 from '../assets/images/girl-image.png';
+
+// Export as an object
+export const images = {
+  spellFinalCover,
+  girlImage1,
+  girlImage2,
+};
+
 
 const settings = {
   dots: true, 
@@ -157,7 +169,7 @@ const Home = () => {
           transition={{ duration: 1 }}
         >
           <img
-            src="../assets/images/spell_final_cover__4___3_.pdf-removebg-preview (1).png"
+            src={images.spellFinalCover}
             alt="SpellCraft Olympiad"
             className="w-[300px] h-[300px] lg:w-[500px] lg:h-[500px] object-contain"
           />
@@ -244,7 +256,7 @@ const Home = () => {
   {/* Right Image Section - Hidden on Mobile */}
   <div className="w-full md:w-1/4 justify-center items-start mt-8 md:mt-0 hidden md:flex relative">
     <motion.img
-      src="src/assets/images/Girl-image-2.png"
+      src={images.girlImage1}
       alt="Girl illustration"
       className="w-full h-full object-fit" // Ensures the image covers the entire section
       style={{
