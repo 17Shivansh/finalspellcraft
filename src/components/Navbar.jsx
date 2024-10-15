@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import logo from '../assets/images/Skill-share-india-logo.png'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -48,7 +49,7 @@ const Navbar = () => {
           transition={{ duration: 0.8 }}
         >
           <img
-            src="./src/assets/images/Skill-share-india-logo.png"
+            src={logo}
             alt="SkillShareIndia Logo"
             className="h-12 w-auto mr-3 md:h-10 md:mr-2 lg:h-16 lg:mr-4"
             loading="lazy"
