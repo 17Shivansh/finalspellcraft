@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 // Import all images
 import spellFinalCover from '../assets/images/spell_final_cover__4___3_.pdf-removebg-preview.png'; // Adjust path if needed
 import girlImage1 from '../assets/images/Girl-image-2.png';
-import girlImage2 from '../assets/images/girl-image.png';
+import girlImage2 from '../assets/images/Girl-images.png';
 
 // Export as an object
 export const images = {
