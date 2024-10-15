@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import girlImage1 from '../assets/images/Girl-images.png';
-import Result from '"../assets/images/spellcraft.jpg" '
+import Result from '../assets/images/spellcraft.jpg'
 import { FaBullseye, FaEye, FaCheckCircle } from 'react-icons/fa'; // Icons for mission and vision
 
 
