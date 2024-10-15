@@ -290,7 +290,7 @@ const Home = () => {
             {/* Right Side: Image */}
             <div className="w-full lg:w-1/3 p-4 order-1 lg:order-2">
               <motion.img
-                src={girlImage2}
+                src={images.girlImage2}
                 alt="Girl Image"
                 className="max-w-full h-auto"
                 initial={{ opacity: 0, scale: 0.8 }}
