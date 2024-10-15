@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import girlImage1 from '../assets/images/Girl-images.png';
+import Result from '"../assets/images/spellcraft.jpg" '
 import { FaBullseye, FaEye, FaCheckCircle } from 'react-icons/fa'; // Icons for mission and vision
 
 
@@ -131,7 +132,7 @@ const AboutUs = () => {
     {/* Right: Single Image */}
     <div className="md:w-1/4 w-full flex justify-center items-center">
       <motion.img
-        src="./src/assets/images/spellcraft.jpg" // Replace with your actual image path
+        src={Result}// Replace with your actual image path
         alt="Summary Image"
         className="w-[250px] md:w-full h-auto rounded-lg shadow-md transition-transform transform hover:scale-105 object-cover"
         initial={{ opacity: 0, scale: 0.9 }}
