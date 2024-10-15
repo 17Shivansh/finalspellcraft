@@ -48,7 +48,7 @@ const Navbar = () => {
           transition={{ duration: 0.8 }}
         >
           <img
-            src="/src/assets/images/Skill-share-india-logo.png"
+            src="./src/assets/images/Skill-share-india-logo.png"
             alt="SkillShareIndia Logo"
             className="h-12 w-auto mr-3 md:h-10 md:mr-2 lg:h-16 lg:mr-4"
             loading="lazy"
