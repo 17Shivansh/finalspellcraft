@@ -157,7 +157,7 @@ const Home = () => {
           transition={{ duration: 1 }}
         >
           <img
-            src="src/assets/images/spell_final_cover__4___3_.pdf-removebg-preview (1).png"
+            src="./src/assets/images/spell_final_cover__4___3_.pdf-removebg-preview (1).png"
             alt="SpellCraft Olympiad"
             className="w-[300px] h-[300px] lg:w-[500px] lg:h-[500px] object-contain"
           />
