@@ -1,20 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { AiOutlineCheckCircle, AiOutlineCloseCircle } from 'react-icons/ai'; // Importing icons
-import mail from '../assets/images/image 1.png';
-import phone from '../assets/images/image 2.png';
-import location from '../assets/images/image 12.png';
-
-
-
-
-// Export as an object
-export const images = {
-  mail,
-  phone,
-  location,
-
-};
+import { AiOutlineCheckCircle, AiOutlineCloseCircle } from 'react-icons/ai'; 
 
 const ContactUs = () => {
   const [modalVisible, setModalVisible] = useState(false);
@@ -198,11 +184,11 @@ const ContactUs = () => {
                 onClick={() => window.open('mailto:contact@skillshareindia.com')}
               >
                 <img
-                  src={images.mail}
+                  src="./src/assets/images/image 1.png"
                   alt="Mail Logo"
                   className="w-6 h-6 mr-4"
                 />
-                <span className="text-sm sm:text-base">contact@skillshareindia.com</span>
+                <span className="text-sm sm:text-base">skillshareindia00@gmail.com</span>
               </motion.div>
 
               {/* Phone */}
@@ -210,46 +196,48 @@ const ContactUs = () => {
                 className="flex items-center cursor-pointer mb-4"
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
-                onClick={() => window.open('tel:+911234567890')}
+                onClick={() => window.open('tel:+918700630842')}
               >
                 <img
-                  src={images.phone}
+                  src="./src/assets/images/image 2.png"
                   alt="Phone Logo"
                   className="w-6 h-6 mr-4"
                 />
-                <span className="text-sm sm:text-base">+91 12345 67890</span>
+                <span className="text-sm sm:text-base">+918700630842</span>
               </motion.div>
 
-              {/* Address */}
-              <motion.div
-                className="flex items-start cursor-pointer mb-4"
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.3 }}
-                onClick={() =>
-                  window.open('https://maps.google.com?q=123+SkillShare+Street,+New+Delhi,+India')
-                }
-              >
-                <img
-                  src={images.location}
-                  alt="Address Logo"
-                  className="w-6 h-6 mr-4"
-                />
-                <span className="text-sm sm:text-base">123, SkillShare Street, New Delhi, India</span>
-              </motion.div>
+          {/* Address */}
+<motion.div
+  className="flex items-start cursor-pointer mb-4"
+  whileHover={{ scale: 1.05 }}
+  transition={{ duration: 0.3 }}
+  onClick={() =>
+    window.open('https://maps.google.com?q=Skillshare+India,+723+Tower+C,+Seventh+Floor,+Logix+Cyberpark,+sector+62,+Noida,+201-301', '_blank')
+  }
+>
+  <img
+    src="./src/assets/images/image 12.png"
+    alt="Address Logo"
+    className="w-6 h-6 mr-4"
+  />
+  <span className="text-sm sm:text-base">Skillshare India, 723 Tower C, Seventh Floor, Logix Cyberpark, sector 62, Noida, 201-301</span>
+</motion.div>
+
             </div>
 
             {/* Map Section */}
             <div className="w-full h-64 rounded-lg overflow-hidden shadow-lg">
-              <iframe
-                title="Location Map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.04451129443!2d77.20622973430656!3d28.535517460487408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390c1bc1234e56a7%3A0x24d456f1fd49bcfd!2sNew%20Delhi%2C%20Delhi%2C%20India!5e0!3m2!1sen!2sus!4v1625648239655!5m2!1sen!2sus"
-                width="100%"
-                height="100%"
-                style={{ border: '0' }}
-                allowFullScreen=""
-                loading="lazy"
-              ></iframe>
-            </div>
+  <iframe
+    title="Location Map"
+    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d241317.04451129443!2d77.20622973430656!3d28.535517460487408!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390c1bc1234e56a7%3A0x24d456f1fd49bcfd!2sSkillshare%20India%2C%20723%20Tower%20C%2C%20Seventh%20Floor%2C%20Logix%20Cyberpark%2C%20Sector%2062%2C%20Noida%2C%20201-301!5e0!3m2!1sen!2sus!4v1625648239655!5m2!1sen!2sus"
+    width="100%"
+    height="100%"
+    style={{ border: '0' }}
+    allowFullScreen=""
+    loading="lazy"
+  ></iframe>
+</div>
+
           </div>
         </div>
 

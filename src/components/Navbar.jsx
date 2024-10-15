@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import logo from '../assets/images/Skill-share-india-logo.png'
+import logo from '../assets/images/Skill-share-india-logo.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,9 +9,10 @@ const Navbar = () => {
   const location = useLocation();
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
+    setIsOpen(prevState => !prevState); // Toggle the menu state
   };
 
+  // Close the menu if clicked outside
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (navRef.current && !navRef.current.contains(event.target)) {
@@ -24,8 +25,9 @@ const Navbar = () => {
     };
   }, []);
 
+  // Close the menu when navigating to a new page
   useEffect(() => {
-    setIsOpen(false);
+    setIsOpen(false);  
   }, [location]);
 
   const navLinks = [
@@ -56,6 +58,7 @@ const Navbar = () => {
           />
         </motion.div>
 
+        {/* Desktop navigation */}
         <motion.div
           className="hidden md:flex space-x-6 lg:space-x-8"
           initial={{ y: -20, opacity: 0 }}
@@ -73,8 +76,14 @@ const Navbar = () => {
           ))}
         </motion.div>
 
-        <button onClick={toggleMenu} aria-expanded={isOpen} className="md:hidden focus:outline-none relative z-50">
+        {/* Hamburger menu for mobile */}
+        <button
+          onClick={toggleMenu}
+          aria-expanded={isOpen}
+          className="md:hidden focus:outline-none relative z-50"
+        >
           <div className="flex flex-col justify-center items-center space-y-1">
+            {/* Hamburger bars */}
             <span className={`block w-6 h-0.5 bg-[#002F6C] transition-transform duration-300 ${isOpen ? 'rotate-45 translate-y-1.5' : ''}`}></span>
             <span className={`block w-6 h-0.5 bg-[#002F6C] transition-opacity duration-300 ${isOpen ? 'opacity-0' : 'opacity-100'}`}></span>
             <span className={`block w-6 h-0.5 bg-[#002F6C] transition-transform duration-300 ${isOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></span>
@@ -82,6 +91,7 @@ const Navbar = () => {
         </button>
       </div>
 
+      {/* Mobile navigation menu */}
       <motion.div
         ref={navRef}
         className={`md:hidden ${isOpen ? 'block' : 'hidden'} mt-2 bg-[#D0E8F2] rounded-lg shadow-lg relative`}
@@ -94,7 +104,7 @@ const Navbar = () => {
             key={link.to}
             to={link.to}
             className="block px-4 py-3 text-[#002F6C] font-semibold hover:bg-[#F9A825] transition duration-300 text-base"
-            onClick={() => setIsOpen(false)}
+            onClick={() => setIsOpen(false)}  // Close menu after clicking a link
           >
             {link.label}
           </Link>
