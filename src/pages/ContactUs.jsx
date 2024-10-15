@@ -1,6 +1,20 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { AiOutlineCheckCircle, AiOutlineCloseCircle } from 'react-icons/ai'; // Importing icons
+import mail from '../assets/images/image 1.png';
+import phone from '../assets/images/image 2.png';
+import location from '../assets/images/image 12.png';
+
+
+
+
+// Export as an object
+export const images = {
+  mail,
+  phone,
+  location,
+
+};
 
 const ContactUs = () => {
   const [modalVisible, setModalVisible] = useState(false);
@@ -184,7 +198,7 @@ const ContactUs = () => {
                 onClick={() => window.open('mailto:contact@skillshareindia.com')}
               >
                 <img
-                  src="./src/assets/images/image 1.png"
+                  src={images.mail}
                   alt="Mail Logo"
                   className="w-6 h-6 mr-4"
                 />
@@ -199,7 +213,7 @@ const ContactUs = () => {
                 onClick={() => window.open('tel:+911234567890')}
               >
                 <img
-                  src="./src/assets/images/image 2.png"
+                  src={images.phone}
                   alt="Phone Logo"
                   className="w-6 h-6 mr-4"
                 />
@@ -216,7 +230,7 @@ const ContactUs = () => {
                 }
               >
                 <img
-                  src="./src/assets/images/image 12.png"
+                  src={images.location}
                   alt="Address Logo"
                   className="w-6 h-6 mr-4"
                 />

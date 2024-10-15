@@ -1,8 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import girlImage1 from '../assets/images/Girl-images.png';
 
 
+// Export as an object
+export const images = {
+  girlImage1,
+};
 
 
 const AboutUs = () => {
@@ -34,7 +39,7 @@ const AboutUs = () => {
       transition={{ duration: 0.6, ease: 'easeInOut' }}
     >
       <motion.img
-        src="./src/assets/images/Girl-images.png" // Replace with your actual image path
+        src={images.girlImage1} // Replace with your actual image path
         alt="Educational Consultancy"
         className="max-w-full h-auto transition-transform duration-500 transform hover:scale-105 rounded-lg shadow-md"
         initial={{ opacity: 0, y: -30 }} // Start slightly above

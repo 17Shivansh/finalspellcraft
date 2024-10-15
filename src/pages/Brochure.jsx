@@ -4,10 +4,11 @@ import { toolbarPlugin } from '@react-pdf-viewer/toolbar';
 import { motion } from 'framer-motion';
 import '@react-pdf-viewer/core/lib/styles/index.css';
 import '@react-pdf-viewer/toolbar/lib/styles/index.css';
+import Brouchre from '../assets/Brochure for web.pdf';
 
 const Brochure = () => {
   // Correct path for accessing the PDF from the public folder
-  const brochureUrl = './public/Others/Brochure for web.pdf'; // Access the PDF from public folder
+  const brochureUrl = {Brochure}; // Access the PDF from public folder
 
   // Toolbar plugin to add PDF controls like zoom, print, etc.
   const toolbarPluginInstance = toolbarPlugin();
