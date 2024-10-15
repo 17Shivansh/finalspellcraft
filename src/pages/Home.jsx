@@ -273,54 +273,55 @@ const Home = () => {
 </div>
 
  
-
-
-      {/* About Us Section */}
-      <motion.div
-        className="py-8 bg-gradient-to-r from-[#f5f7fa] via-[#e6e9f0] to-[#f5f7fa] relative overflow-hidden"
-        initial={{ backgroundPosition: "0% 50%" }}
-        animate={{ backgroundPosition: "100% 50%" }}
-        transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
-      >
-        <div className="container mx-auto w-[90%] lg:w-[80%] p-6 relative z-10">
-          <h1 className="text-3xl font-bold text-center text-gray-800 mb-6 animate-bounce">
-            About Us
-          </h1>
-          <div className="flex flex-col lg:flex-row justify-center items-center">
-            {/* Right Side: Image */}
-            <div className="w-full lg:w-1/3 p-4 order-1 lg:order-2">
-              <motion.img
-                src={images.girlImage2}
-                alt="Girl Image"
-                className="max-w-full h-auto"
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5 }}
-              />
-            </div>
-            {/* Left Side: Content */}
-            <div className="w-full lg:w-2/3 p-4 order-2 lg:order-1 flex flex-col justify-center">
-              <motion.p
-                className="text-gray-700 text-lg leading-relaxed mb-4"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.5 }}
-              >
-                We've created a unique competition format for students from Nursery to 10th grade, enhancing their language skills through interactive assessments. 
-                Engage in quizzes that foster communication abilities and build confidence.
-              </motion.p>
-              <div className="mt-4 flex justify-center">
-                <Link 
-                  to="/about-us" 
-                  className="bg-blue-600 text-white py-2 px-4 rounded-lg shadow-lg hover:bg-blue-700 transition-all duration-300"
-                >
-                  Read More
-                </Link>
-              </div>
-            </div>
-          </div>
+{/* About Us Section */}
+<motion.div
+  className="py-8 bg-gradient-to-r from-[#f5f7fa] via-[#e6e9f0] to-[#f5f7fa] relative overflow-hidden"
+  initial={{ backgroundPosition: "0% 50%" }}
+  animate={{ backgroundPosition: "100% 50%" }}
+  transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+>
+  <div className="container mx-auto w-[90%] lg:w-[80%] p-6 relative z-10">
+    <h1 className="text-3xl font-bold text-center text-gray-800 mb-6 animate-bounce">
+      About Us
+    </h1>
+    <div className="flex flex-col lg:flex-row justify-center items-center">
+      {/* Left Side: Content */}
+      <div className="w-full lg:w-2/3 p-4 order-1 flex flex-col justify-center">
+        <motion.p
+          className="text-gray-700 text-lg leading-relaxed mb-4"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          We've created a unique competition format for students from Nursery to 10th grade, enhancing their language skills through interactive assessments. 
+          Engage in quizzes that foster communication abilities and build confidence.
+        </motion.p>
+        <div className="mt-4 flex justify-center">
+          <Link 
+            to="/about-us" 
+            className="bg-blue-600 text-white py-2 px-4 rounded-lg shadow-lg hover:bg-blue-700 transition-all duration-300"
+          >
+            Read More
+          </Link>
         </div>
-      </motion.div>
+      </div>
+      {/* Right Side: Image */}
+      <div className="w-full lg:w-1/3 p-4 order-2 flex justify-center">
+        <motion.img
+          src={images.girlImage2}
+          alt="Girl Image"
+          className="max-w-full h-auto"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+        />
+      </div>
+    </div>
+  </div>
+</motion.div>
+
+
+   
       <div className="max-w-screen-lg mx-auto my-10 px-4">
   <h2 className="text-4xl font-bold text-center mb-6 text-gray-800">
     What Our Clients Say
