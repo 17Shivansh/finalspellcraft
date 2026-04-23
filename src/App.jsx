@@ -10,7 +10,7 @@ import AboutUs from './pages/AboutUs.jsx';
 import Result from './pages/Result.jsx';
 
 function App() {
-  return (
+  return ( //
     <>
       <Navbar />
       <Routes>
